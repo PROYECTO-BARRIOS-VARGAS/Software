@@ -1,1 +1,2 @@
 Para convertir de .ui a .py ---> pyuic5 -x archivo.ui -o archivo.py
+Para crear la app pyinstaller --windowed --onefile --icon=./icono.ico main.py

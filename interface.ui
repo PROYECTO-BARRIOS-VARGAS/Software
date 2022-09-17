@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>703</width>
-    <height>388</height>
+    <width>700</width>
+    <height>373</height>
    </rect>
   </property>
   <property name="font">
@@ -25,54 +25,51 @@
 	border:none;
 	background-color:transparent;
 	background:transparent;
-	padding: 0;
-	margin: 0;
+	padding: 0.031em;
+	margin: 0.031em;
 }
-#centralwidget{
-	background-color:#2c313c;
+#MainWindow{
+	height: 700%;
+	width: 900%;
+	max-height: 500%;
+	max-width: 700%;
 }
-#leftMenuSubContainer{
-	background-color:#d2d8d3;
+#headerContainer,#leftMenuSubContainer{
+	background-color:rgb(65, 67, 95)
 }
 #leftMenuSubContainer QPushButton{
 	text-align: left;
-	padding: 5px 10px;
+	padding: 0.313em 0.625em;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
-#centerMenuSubContainer,#rightMenuSubContainer{
-	background-color:#2c313c;
+#centerMenuSubContainer,#rightMenuSubContainer, #mainBodyContent{
+	background-color:#1c2833;
 }
-#frame_8,#popupNotificationSubContainer, #frame_14{
-	background-color:#d2d8d3;
-	border-radius: 10px;
+#footerContainer{
+	background-color:#a49fa5;
 }
-#headerContainer,#footerContainer,#plancha1_1,#plancha2_1, #notificaciones{
-	background-color:#d2d8d3;
-}
-#frame_9, #planchasHor2{
-	background-color:#ff5733;
-}
-#frame_10{
-	background-color:#6364a2;
-}
-#planchasHor1{
-	background-color:#6364a2;
-}
-#frame_11, #frame_31{
-	background-color:#4fcd60;
-	border-radius: 10px;
-}
-#frame_9, #frame_10, #notificaciones{
+#frame_9, #frame_10{
 	border-radius: 10px;
 }
 #headerContainer{
-	height: 150;
+	height: 150%;
 }
+#frame_8{
+	background-color: #fdfcf4;
+	border-radius: 10px;
+}
+
+
+
+
 
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <property name="spacing">
      <number>0</number>
@@ -115,6 +112,11 @@
        </property>
        <item>
         <widget class="QWidget" name="leftMenuSubContainer" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+	width: 900%;
+}</string>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
            <number>0</number>
@@ -210,14 +212,24 @@
              </property>
              <item>
               <widget class="QPushButton" name="homeBtn">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="toolTip">
-                <string>Maduración</string>
+                <string>Hornos</string>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #2c313c;</string>
+                <string notr="true">background-color: #fdfcf4;
+
+
+</string>
                </property>
                <property name="text">
-                <string>Menú</string>
+                <string>Hornos</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -232,16 +244,29 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="HOR1Btn_2">
+              <widget class="QPushButton" name="DBBtn">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="toolTip">
-                <string>Datos</string>
+                <string>Base de datos</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #ffffff;</string>
                </property>
                <property name="text">
-                <string>HOR1</string>
+                <string>Base de datos</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/calendar.svg</normaloff>:/icons/icons/calendar.svg</iconset>
+                 <normaloff>:/icons/icons/database.svg</normaloff>:/icons/icons/database.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -252,16 +277,26 @@
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="HOR2Btn_2">
+              <widget class="QPushButton" name="logsBtn">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="toolTip">
-                <string>Reportes</string>
+                <string>Logs</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #ffffff;</string>
                </property>
                <property name="text">
-                <string>HOR2</string>
+                <string>Logs</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/calendar.svg</normaloff>:/icons/icons/calendar.svg</iconset>
+                 <normaloff>:/icons/icons/archive.svg</normaloff>:/icons/icons/archive.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -312,49 +347,19 @@
               </spacer>
              </item>
              <item>
-              <widget class="QPushButton" name="settingsBtn">
-               <property name="toolTip">
-                <string>Ajustes</string>
-               </property>
-               <property name="text">
-                <string>Logs</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/archive.svg</normaloff>:/icons/icons/archive.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="infoBtn">
-               <property name="toolTip">
-                <string>Información</string>
-               </property>
-               <property name="text">
-                <string>Base de datos</string>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/database.svg</normaloff>:/icons/icons/database.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QPushButton" name="helpBtn">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="toolTip">
                 <string>Ayuda</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #ffffff;</string>
                </property>
                <property name="text">
                 <string>Ayuda</string>
@@ -435,12 +440,16 @@
               <widget class="QLabel" name="label">
                <property name="font">
                 <font>
+                 <pointsize>10</pointsize>
                  <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
+               <property name="styleSheet">
+                <string notr="true">color: #ffffff;</string>
+               </property>
                <property name="text">
-                <string>More Menu</string>
+                <string>AYUDA</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -482,64 +491,10 @@
              </size>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
-            <widget class="QWidget" name="page">
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Ajutes</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="page_3">
-             <layout class="QVBoxLayout" name="verticalLayout_9">
-              <item>
-               <widget class="QLabel" name="label_4">
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Help</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="page_2">
-             <layout class="QVBoxLayout" name="verticalLayout_8">
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Information</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-             </layout>
+            <widget class="QWidget" name="ayuda">
+             <layout class="QVBoxLayout" name="verticalLayout_9"/>
             </widget>
            </widget>
           </item>
@@ -580,6 +535,11 @@
         <widget class="QWidget" name="headerContainer" native="true">
          <property name="toolTipDuration">
           <number>-47</number>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+	height: 40%
+}</string>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
@@ -632,46 +592,6 @@
                <property name="icon">
                 <iconset resource="resources.qrc">
                  <normaloff>:/icons/icons/bell.svg</normaloff>:/icons/icons/bell.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="profileMenuBtn">
-               <property name="toolTip">
-                <string>Perfil</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/user.svg</normaloff>:/icons/icons/user.svg</iconset>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>24</width>
-                 <height>24</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QPushButton" name="moreMenuBtn">
-               <property name="toolTip">
-                <string>More</string>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="icon">
-                <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/more-horizontal.svg</normaloff>:/icons/icons/more-horizontal.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -738,6 +658,13 @@
                <property name="toolTip">
                 <string>Cerrar</string>
                </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover {
+	background-color: #ca1310 ;
+	border: 0.313em solid #ca1310;
+	border-radius: 0.313em;
+}</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -767,6 +694,9 @@
            <height>206</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_7">
           <item>
            <widget class="QWidget" name="mainContentsContainer" native="true">
@@ -774,7 +704,7 @@
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>0</number>
+                <number>3</number>
                </property>
                <widget class="QWidget" name="menuPrincipal">
                 <layout class="QVBoxLayout" name="verticalLayout_25">
@@ -801,9 +731,27 @@
                          <property name="font">
                           <font>
                            <pointsize>10</pointsize>
-                           <weight>75</weight>
+                           <weight>99</weight>
+                           <italic>false</italic>
                            <bold>true</bold>
                           </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	background-color: rgb(152, 255, 96);
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 170, 0);
+	border: 5px solid rgb(152, 255, 96);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                          </property>
                          <property name="text">
                           <string>HOR1</string>
@@ -821,6 +769,9 @@
                     </item>
                     <item>
                      <widget class="QFrame" name="frame_9">
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -833,9 +784,28 @@
                          <property name="font">
                           <font>
                            <pointsize>10</pointsize>
-                           <weight>75</weight>
+                           <weight>99</weight>
+                           <italic>false</italic>
                            <bold>true</bold>
                           </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {
+	background-color: rgb(230, 0, 0);
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(170, 0, 0);
+	border: 5px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}
+</string>
                          </property>
                          <property name="text">
                           <string>HOR2</string>
@@ -856,6 +826,15 @@
                  </item>
                  <item>
                   <widget class="QFrame" name="notificaciones">
+                   <property name="styleSheet">
+                    <string notr="true">QFrame{
+	background-color: #fdfcf4;
+	border-radius: 10px;
+}
+
+
+</string>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -877,13 +856,102 @@
                       </property>
                      </widget>
                     </item>
+                    <item>
+                     <widget class="QLabel" name="label_37">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Error detectado de tensión en HORNO 1, Plancha 2</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_36">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Error detectado en HORNO1, Plancha 1, Posicion (1,3)</string>
+                      </property>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="planchasHor2_3">
+               <widget class="QWidget" name="plancha3_1">
                 <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <widget class="QFrame" name="frame_22">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_22{
+	background-color: #fdfcf4;;
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_17">
+                    <item>
+                     <widget class="QLabel" name="label_30">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>HORNO 1</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="backPlancha3Hor1Btn">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                  <item>
                   <widget class="QFrame" name="frame_17">
                    <property name="frameShape">
@@ -892,45 +960,89 @@
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <widget class="QPushButton" name="pushButton_51">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>30</y>
-                      <width>75</width>
-                      <height>23</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>PushButton</string>
-                    </property>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton_52">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>60</y>
-                      <width>75</width>
-                      <height>23</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>PushButton</string>
-                    </property>
-                   </widget>
-                   <widget class="QPushButton" name="pushButton_53">
-                    <property name="geometry">
-                     <rect>
-                      <x>10</x>
-                      <y>10</y>
-                      <width>75</width>
-                      <height>23</height>
-                     </rect>
-                    </property>
-                    <property name="text">
-                     <string>PushButton</string>
-                    </property>
-                   </widget>
+                   <layout class="QGridLayout" name="gridLayout_5">
+                    <item row="1" column="1">
+                     <widget class="QLabel" name="label_27">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Temperatura:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLabel" name="label_26">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tension:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_25">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 3</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <widget class="QLabel" name="label_28">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>3,9 V</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="2">
+                     <widget class="QLabel" name="label_29">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>98 º C</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                  <item>
@@ -941,25 +1053,807 @@
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QGridLayout" name="gridLayout_4">
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="pushButton_33">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QPushButton" name="pushButton_34">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QPushButton" name="pushButton_32">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QPushButton" name="pushButton_27">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>5</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QPushButton" name="pushButton_25">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>7</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QPushButton" name="pushButton_29">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QPushButton" name="pushButton_26">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QPushButton" name="pushButton_28">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="pushButton_31">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QPushButton" name="pushButton_30">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>2</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_8">
+               <widget class="QWidget" name="plancha1_2">
                 <layout class="QVBoxLayout" name="verticalLayout_18">
                  <item>
-                  <widget class="QLabel" name="reportes">
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                    </font>
+                  <widget class="QFrame" name="frame_24">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_24{
+	background-color: #fdfcf4;;
+	border-radius: 10px;
+}</string>
                    </property>
-                   <property name="text">
-                    <string>Reportes</string>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
                    </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
                    </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_18">
+                    <item>
+                     <widget class="QLabel" name="label_24">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string>HORNO 2</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="backPlancha1Hor2Btn">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_26">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_6">
+                    <item row="1" column="1">
+                     <widget class="QLabel" name="label_31">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Temperatura:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLabel" name="label_32">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tension:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_33">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 1</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2">
+                     <widget class="QLabel" name="label_34">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>3,9 V</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="2">
+                     <widget class="QLabel" name="label_35">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>98 º C</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_25">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_10">
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="pushButton_46">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QPushButton" name="pushButton_47">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QPushButton" name="pushButton_48">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QPushButton" name="pushButton_49">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>5</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QPushButton" name="pushButton_50">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>7</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0">
+                     <widget class="QPushButton" name="pushButton_51">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>1</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QPushButton" name="pushButton_52">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QPushButton" name="pushButton_53">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="pushButton_56">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QPushButton" name="pushButton_57">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>2</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
@@ -967,7 +1861,87 @@
                <widget class="QWidget" name="planchasHor1">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
                  <item>
+                  <widget class="QFrame" name="frame_14">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_14{
+	background-color: #fdfcf4;;
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string>HORNO 1</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+                     <widget class="QPushButton" name="backHor1Btn">
+                      <property name="toolTip">
+                       <string>Atrás</string>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+
+	
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QFrame" name="frame_12">
+                   <property name="styleSheet">
+                    <string notr="true">QFrame {
+	width: 270%;
+	height: 30%;
+}</string>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -978,143 +1952,74 @@
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
-                    <item row="5" column="0">
+                    <item row="4" column="0">
                      <widget class="QPushButton" name="plancha5_1Btn">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 5</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="6" column="1">
-                     <widget class="QPushButton" name="plancha12_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 12</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="0">
-                     <widget class="QPushButton" name="plancha2_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="0">
-                     <widget class="QPushButton" name="plancha4_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 4</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1">
-                     <widget class="QPushButton" name="plancha10_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 10</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QPushButton" name="plancha1_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QPushButton" name="plancha7_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="1">
+                    <item row="6" column="0">
                      <widget class="QPushButton" name="plancha9_1Btn">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 9</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="1">
-                     <widget class="QPushButton" name="plancha11_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 11</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="1">
-                     <widget class="QPushButton" name="plancha8_1Btn">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 8</string>
                       </property>
                      </widget>
                     </item>
@@ -1123,41 +2028,351 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 3</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="6" column="0">
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="plancha4_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 4</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="0">
+                     <widget class="QPushButton" name="plancha7_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 7</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="5" column="1">
+                     <widget class="QPushButton" name="plancha8_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 8</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="7" column="0">
+                     <widget class="QPushButton" name="plancha11_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 11</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="7" column="1">
+                     <widget class="QPushButton" name="plancha12_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 12</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QPushButton" name="plancha2_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 2</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
                      <widget class="QPushButton" name="plancha6_1Btn">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 6</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="0" column="0" alignment="Qt::AlignTop">
-                     <widget class="QLabel" name="label_22">
+                    <item row="6" column="1">
+                     <widget class="QPushButton" name="plancha10_1Btn">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
-                        <underline>true</underline>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
-                       <string>HORNO 1</string>
+                       <string>Plancha 10</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QPushButton" name="plancha1_1Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 5px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 1</string>
                       </property>
                      </widget>
                     </item>
@@ -1166,6 +2381,9 @@
                  </item>
                  <item alignment="Qt::AlignRight|Qt::AlignBottom">
                   <widget class="QFrame" name="frame_11">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -1199,16 +2417,38 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: rgb(194, 255, 156);
+	font-style: normal;
+	font-weight: 800;
+	height: 50%;
+	width: 300%;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	background-color: rgb(146, 216, 107);
+	border: 5px solid rgb(194, 255, 156);
+	border-width: 1px;
+	border-radius: 20px;
+}
+
+
+
+</string>
                       </property>
                       <property name="text">
                        <string>INICIAR MADURACION</string>
                       </property>
                       <property name="icon">
                        <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/chevron-right.svg</normaloff>:/icons/icons/chevron-right.svg</iconset>
+                        <normaloff>:/icons/icons/log-in.svg</normaloff>:/icons/icons/log-in.svg</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1225,6 +2465,73 @@
                </widget>
                <widget class="QWidget" name="plancha1_1">
                 <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <item>
+                  <widget class="QFrame" name="frame_19">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_19{
+	background-color: #fdfcf4;;
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <item>
+                     <widget class="QLabel" name="label_14">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>HORNO 1</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+                     <widget class="QPushButton" name="backPlancha1Hor1Btn">
+                      <property name="toolTip">
+                       <string>Atrás</string>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                  <item alignment="Qt::AlignTop">
                   <widget class="QFrame" name="frame_18">
                    <property name="frameShape">
@@ -1234,7 +2541,71 @@
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout_3">
-                    <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                    <item row="1" column="3" alignment="Qt::AlignRight">
+                     <widget class="QLabel" name="label_16">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>100 °C</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="2" alignment="Qt::AlignLeft">
+                     <widget class="QLabel" name="label_11">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Temperatura:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="3" alignment="Qt::AlignRight">
+                     <widget class="QLabel" name="label_15">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>2,9 V</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2" alignment="Qt::AlignLeft">
+                     <widget class="QLabel" name="label_10">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Tension: </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignVCenter">
                      <widget class="QLabel" name="label_8">
                       <property name="font">
                        <font>
@@ -1243,49 +2614,11 @@
                         <bold>true</bold>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
                       <property name="text">
                        <string>Plancha 1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="2" alignment="Qt::AlignLeft">
-                     <widget class="QLabel" name="label_10">
-                      <property name="font">
-                       <font>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Tension: </string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="2" alignment="Qt::AlignLeft">
-                     <widget class="QLabel" name="label_11">
-                      <property name="font">
-                       <font>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Temperatura:</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="label_21">
-                      <property name="font">
-                       <font>
-                        <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                        <underline>true</underline>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>HORNO 1</string>
                       </property>
                      </widget>
                     </item>
@@ -1304,8 +2637,28 @@
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout">
-                    <item row="0" column="0" alignment="Qt::AlignVCenter">
+                    <item row="0" column="0">
                      <widget class="QPushButton" name="pushButton_9">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
                        <string>1</string>
                       </property>
@@ -1313,95 +2666,30 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
                      </widget>
                     </item>
-                    <item row="3" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_2">
-                      <property name="text">
-                       <string>8</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_4">
-                      <property name="text">
-                       <string>10</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton">
-                      <property name="text">
-                       <string>6</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_8">
-                      <property name="text">
-                       <string>3</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_3">
-                      <property name="text">
-                       <string>4</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1" alignment="Qt::AlignVCenter">
+                    <item row="0" column="1">
                      <widget class="QPushButton" name="pushButton_5">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
                        <string>2</string>
                       </property>
@@ -1409,33 +2697,92 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
                      </widget>
                     </item>
-                    <item row="4" column="0" alignment="Qt::AlignVCenter">
+                    <item row="1" column="0">
                      <widget class="QPushButton" name="pushButton_6">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
-                       <string>9</string>
+                       <string>3</string>
                       </property>
                       <property name="icon">
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="pushButton_2">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
                      </widget>
                     </item>
-                    <item row="2" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_10">
+                    <item row="2" column="0">
+                     <widget class="QPushButton" name="pushButton_7">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
                        <string>5</string>
                       </property>
@@ -1443,16 +2790,61 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QPushButton" name="pushButton_8">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
                      </widget>
                     </item>
-                    <item row="3" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_7">
+                    <item row="3" column="0">
+                     <widget class="QPushButton" name="pushButton">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
                        <string>7</string>
                       </property>
@@ -1460,11 +2852,101 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="pushButton_4">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QPushButton" name="pushButton_3">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QPushButton" name="pushButton_10">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
                      </widget>
                     </item>
@@ -1476,29 +2958,22 @@
                <widget class="QWidget" name="plancha2_1">
                 <layout class="QVBoxLayout" name="verticalLayout_32">
                  <item>
-                  <widget class="QFrame" name="frame_30">
+                  <widget class="QFrame" name="frame_21">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_21{
+	background-color: #fdfcf4;;
+	border-radius: 10px;
+}</string>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
                    <property name="frameShadow">
                     <enum>QFrame::Raised</enum>
                    </property>
-                   <layout class="QGridLayout" name="gridLayout_8">
-                    <item row="1" column="1">
-                     <widget class="QLabel" name="label_18">
-                      <property name="font">
-                       <font>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Tension: </string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0">
-                     <widget class="QLabel" name="label_17">
+                   <layout class="QHBoxLayout" name="horizontalLayout_16">
+                    <item>
+                     <widget class="QLabel" name="label_20">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
@@ -1507,11 +2982,56 @@
                        </font>
                       </property>
                       <property name="text">
-                       <string>Plancha 2</string>
+                       <string>HORNO 1</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                       </property>
                      </widget>
                     </item>
-                    <item row="2" column="1">
+                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+                     <widget class="QPushButton" name="backPlancha2Hor1Btn">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+
+	
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_30">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_8">
+                    <item row="1" column="1" alignment="Qt::AlignLeft">
                      <widget class="QLabel" name="label_19">
                       <property name="font">
                        <font>
@@ -1519,23 +3039,77 @@
                         <bold>true</bold>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
                       <property name="text">
                        <string>Temperatura:</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="label_20">
+                    <item row="0" column="1" alignment="Qt::AlignLeft">
+                     <widget class="QLabel" name="label_18">
                       <property name="font">
                        <font>
-                        <pointsize>12</pointsize>
                         <weight>75</weight>
                         <bold>true</bold>
-                        <underline>true</underline>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
                       <property name="text">
-                       <string>HORNO 1</string>
+                       <string>Tension: </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="0" alignment="Qt::AlignLeft">
+                     <widget class="QLabel" name="label_17">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 2</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="2" alignment="Qt::AlignRight">
+                     <widget class="QLabel" name="label_22">
+                      <property name="font">
+                       <font>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>2,9 V</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="2" alignment="Qt::AlignRight">
+                     <widget class="QLabel" name="label_23">
+                      <property name="font">
+                       <font>
+                        <pointsize>8</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>100 °C</string>
                       </property>
                      </widget>
                     </item>
@@ -1554,42 +3128,29 @@
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout_7">
-                    <item row="0" column="0" alignment="Qt::AlignVCenter">
+                    <item row="3" column="0">
                      <widget class="QPushButton" name="pushButton_41">
-                      <property name="text">
-                       <string>1</string>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_48">
-                      <property name="text">
-                       <string>9</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_50">
                       <property name="text">
                        <string>7</string>
                       </property>
@@ -1597,18 +3158,32 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
                      </widget>
                     </item>
-                    <item row="4" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_43">
+                    <item row="0" column="0">
+                     <widget class="QPushButton" name="pushButton_37">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
-                       <string>10</string>
+                       <string>1</string>
                       </property>
                       <property name="icon">
                        <iconset resource="resources.qrc">
@@ -1616,93 +3191,28 @@
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_46">
-                      <property name="text">
-                       <string>4</string>
+                    <item row="0" column="1">
+                     <widget class="QPushButton" name="pushButton_38">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_44">
-                      <property name="text">
-                       <string>6</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="2" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_49">
-                      <property name="text">
-                       <string>5</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_42">
-                      <property name="text">
-                       <string>8</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="0" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_45">
-                      <property name="text">
-                       <string>3</string>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1" alignment="Qt::AlignVCenter">
-                     <widget class="QPushButton" name="pushButton_47">
                       <property name="text">
                        <string>2</string>
                       </property>
@@ -1710,11 +3220,227 @@
                        <iconset resource="resources.qrc">
                         <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>24</width>
-                        <height>24</height>
-                       </size>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QPushButton" name="pushButton_39">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>5</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="pushButton_35">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>4</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QPushButton" name="pushButton_36">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>3</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QPushButton" name="pushButton_40">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>6</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="pushButton_42">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>8</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QPushButton" name="pushButton_43">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>9</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QPushButton" name="pushButton_44">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>10</string>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/activity.svg</normaloff>:/icons/icons/activity.svg</iconset>
                       </property>
                      </widget>
                     </item>
@@ -1726,6 +3452,76 @@
                <widget class="QWidget" name="planchasHor2">
                 <layout class="QVBoxLayout" name="verticalLayout_33">
                  <item>
+                  <widget class="QFrame" name="frame_20">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_20{
+	background-color: #fdfcf4;
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_15">
+                    <item>
+                     <widget class="QLabel" name="label_21">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string>HORNO 2</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+                     <widget class="QPushButton" name="backHor2Btn">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}
+
+
+	
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QFrame" name="frame_32">
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
@@ -1734,28 +3530,35 @@
                     <enum>QFrame::Raised</enum>
                    </property>
                    <layout class="QGridLayout" name="gridLayout_2">
-                    <item row="1" column="0">
-                     <widget class="QPushButton" name="pushButton_13">
+                    <item row="5" column="0">
+                     <widget class="QPushButton" name="pushButton_20">
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="text">
-                       <string>Plancha 1</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="3" column="1">
-                     <widget class="QPushButton" name="pushButton_11">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 9</string>
@@ -1767,12 +3570,175 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 10</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="1">
+                     <widget class="QPushButton" name="pushButton_55">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 12</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1">
+                     <widget class="QPushButton" name="pushButton_11">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 6</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="6" column="0">
+                     <widget class="QPushButton" name="pushButton_14">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
                        <string>Plancha 11</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QPushButton" name="plancha1_2Btn">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(255, 82, 85);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(230, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 1</string>
                       </property>
                      </widget>
                     </item>
@@ -1781,12 +3747,69 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
-                       <string>Plancha 4</string>
+                       <string>Plancha 7</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1">
+                     <widget class="QPushButton" name="pushButton_19">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 8</string>
                       </property>
                      </widget>
                     </item>
@@ -1795,9 +3818,66 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>Plancha 3</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="pushButton_54">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	background-color: rgb(197, 195, 173);
+	border: 1px solid rgb(255, 254, 216);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 2</string>
@@ -1809,12 +3889,33 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
+                      </property>
                       <property name="text">
-                       <string>Plancha 8</string>
+                       <string>Plancha 4</string>
                       </property>
                      </widget>
                     </item>
@@ -1823,97 +3924,33 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
                       </property>
-                      <property name="text">
-                       <string>Plancha 3</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="4" column="1">
-                     <widget class="QPushButton" name="pushButton_19">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 10</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="5" column="0">
-                     <widget class="QPushButton" name="pushButton_20">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	color: #ffffff;
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 200%;
+	width: 250%;
+	border: 1px solid rgb(85, 255, 127);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(0, 197, 95);
+	border: 1px solid rgb(85, 255, 127);
+	border-width: 1px;
+	border-radius: 5px;
+}</string>
                       </property>
                       <property name="text">
                        <string>Plancha 5</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="0">
-                     <widget class="QLabel" name="label_23">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                        <underline>true</underline>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>HORNO 2</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="0">
-                     <widget class="QPushButton" name="pushButton_14">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 6</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QPushButton" name="pushButton_54">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 7</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="6" column="1">
-                     <widget class="QPushButton" name="pushButton_55">
-                      <property name="font">
-                       <font>
-                        <pointsize>10</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>Plancha 12</string>
                       </property>
                      </widget>
                     </item>
@@ -1922,6 +3959,9 @@
                  </item>
                  <item alignment="Qt::AlignRight|Qt::AlignBottom">
                   <widget class="QFrame" name="frame_31">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -1944,7 +3984,7 @@
                     <property name="bottomMargin">
                      <number>0</number>
                     </property>
-                    <item>
+                    <item alignment="Qt::AlignRight|Qt::AlignBottom">
                      <widget class="QPushButton" name="iniciarMad_2Btn">
                       <property name="maximumSize">
                        <size>
@@ -1955,22 +3995,145 @@
                       <property name="font">
                        <font>
                         <pointsize>10</pointsize>
-                        <weight>75</weight>
+                        <weight>99</weight>
+                        <italic>false</italic>
                         <bold>true</bold>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: rgb(194, 255, 156);
+	font-style: normal;
+	font-weight: 800;
+	height: 50%;
+	width: 300%;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	background-color: rgb(146, 216, 107);
+	border: 5px solid rgb(194, 255, 156);
+	border-width: 1px;
+	border-radius: 20px;
+}
+</string>
                       </property>
                       <property name="text">
                        <string>INICIAR MADURACION</string>
                       </property>
                       <property name="icon">
                        <iconset resource="resources.qrc">
-                        <normaloff>:/icons/icons/chevron-right.svg</normaloff>:/icons/icons/chevron-right.svg</iconset>
+                        <normaloff>:/icons/icons/log-in.svg</normaloff>:/icons/icons/log-in.svg</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
                         <width>30</width>
                         <height>30</height>
                        </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="baseDeDatos">
+                <layout class="QGridLayout" name="gridLayout_11">
+                 <item row="0" column="0" alignment="Qt::AlignTop">
+                  <widget class="QFrame" name="frame_23">
+                   <property name="styleSheet">
+                    <string notr="true">#frame_23{
+	background-color: #fdfcf4;
+	border-radius: 10px;
+}</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_19">
+                    <item>
+                     <widget class="QLabel" name="label_3">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string>BASE DE DATOS</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="backDBBtn">
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {
+	background-color: #fdfcf4;
+	font-style: normal;
+	font-weight: 800;
+	height: 20%;
+	width: 30%;
+	border-radius: 30%;
+}
+
+QPushButton:hover {
+	border: 5px solid rgb(0, 0, 0);
+	border-width: 2px;
+	border-radius: 10%;
+}</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/arrow-left.svg</normaloff>:/icons/icons/arrow-left.svg</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                  <widget class="QFrame" name="frame_27">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_12">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_4">
+                      <property name="font">
+                       <font>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">color: #ffffff;</string>
+                      </property>
+                      <property name="text">
+                       <string>INFO A DETERMINAR</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -2039,82 +4202,170 @@
                  <number>5</number>
                 </property>
                 <item>
-                 <widget class="QFrame" name="frame_5">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_8">
-                   <item>
-                    <widget class="QLabel" name="label_5">
-                     <property name="text">
-                      <string>Right Menu</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                   <item alignment="Qt::AlignRight">
-                    <widget class="QPushButton" name="closeRightMenuBtn">
-                     <property name="toolTip">
-                      <string>Cerrar</string>
-                     </property>
-                     <property name="text">
-                      <string/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resources.qrc">
-                       <normaloff>:/icons/icons/x-circle.svg</normaloff>:/icons/icons/x-circle.svg</iconset>
-                     </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>24</width>
-                       <height>24</height>
-                      </size>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
                  <widget class="QCustomStackedWidget" name="rightMenuPages">
-                  <widget class="QWidget" name="page_4">
-                   <layout class="QVBoxLayout" name="verticalLayout_13">
-                    <item>
-                     <widget class="QLabel" name="label_6">
-                      <property name="font">
-                       <font>
-                        <pointsize>13</pointsize>
-                       </font>
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="logsPage">
+                   <layout class="QVBoxLayout" name="verticalLayout_14">
+                    <item alignment="Qt::AlignTop">
+                     <widget class="QFrame" name="logs">
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+	background-color: #fdfcf4;
+	border-radius: 10px;
+}
+
+
+</string>
                       </property>
-                      <property name="text">
-                       <string>Profile</string>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
                       </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
                       </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                       <item>
+                        <widget class="QFrame" name="frame_5">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_8">
+                          <item>
+                           <widget class="QLabel" name="label_2">
+                            <property name="font">
+                             <font>
+                              <pointsize>10</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true"/>
+                            </property>
+                            <property name="text">
+                             <string>LOGS</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item alignment="Qt::AlignRight">
+                           <widget class="QPushButton" name="closeRightMenuBtn">
+                            <property name="toolTip">
+                             <string>Cerrar</string>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset resource="resources.qrc">
+                              <normaloff>:/icons/icons/x-circle.svg</normaloff>:/icons/icons/x-circle.svg</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>24</width>
+                              <height>24</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
-                   </layout>
-                  </widget>
-                  <widget class="QWidget" name="page_5">
-                   <layout class="QVBoxLayout" name="verticalLayout_14">
                     <item>
-                     <widget class="QLabel" name="label_7">
+                     <widget class="QFrame" name="frame_33">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
+                       <item>
+                        <widget class="QLabel" name="label_40">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: #ffffff;</string>
+                         </property>
+                         <property name="text">
+                          <string>Error detectado en HORNO1, Plancha 1, Posicion (1,3)</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_39">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">color: #ffffff;</string>
+                         </property>
+                         <property name="text">
+                          <string>Error detectado de tensión en HORNO 1, Plancha 2</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight|Qt::AlignBottom">
+                     <widget class="QPushButton" name="iniciarMad_2Btn_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
-                        <pointsize>13</pointsize>
+                        <pointsize>10</pointsize>
+                        <weight>99</weight>
+                        <italic>false</italic>
+                        <bold>true</bold>
                        </font>
                       </property>
-                      <property name="text">
-                       <string>More...</string>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton{
+	width: 70%;	
+	height: 100%;
+	font-style: normal;
+	font-weight: 800;
+	height: 50%;
+	width: 150%;
+   background-color: #fdfcf4;
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	background-color: rgb(161, 156, 137);
+	border: 1px solid rgb(255, 254, 216);
+	border-width: 1px;
+	border-radius: 5px;
+}
+</string>
                       </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
+                      <property name="text">
+                       <string>Descargar</string>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
                       </property>
                      </widget>
                     </item>
@@ -2133,26 +4384,19 @@
        </item>
        <item>
         <widget class="QCustomSlideMenu" name="popupNotificationContainer" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: #fdfcf4;
+border-radius: 30px;</string>
+         </property>
          <layout class="QVBoxLayout" name="verticalLayout_19">
           <item>
            <widget class="QWidget" name="popupNotificationSubContainer" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_20">
-             <item alignment="Qt::AlignLeft">
-              <widget class="QLabel" name="label_12">
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Notificaciones</string>
-               </property>
-              </widget>
-             </item>
              <item>
               <widget class="QFrame" name="frame_8">
+               <property name="styleSheet">
+                <string notr="true">background-color: #fdfcf4;</string>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -2160,14 +4404,28 @@
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_9">
-                <item alignment="Qt::AlignRight|Qt::AlignBottom">
+                <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                 <widget class="QLabel" name="label_12">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Notificaciones</string>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignRight|Qt::AlignTop">
                  <widget class="QPushButton" name="closeNotificationBtn">
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
                    <iconset resource="resources.qrc">
-                    <normaloff>:/icons/icons/x-octagon.svg</normaloff>:/icons/icons/x-octagon.svg</iconset>
+                    <normaloff>:/icons/icons/x-circle.svg</normaloff>:/icons/icons/x-circle.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
