@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfaceQYrqzw.ui'
+## Form generated from reading UI file 'interfacesBeZSG.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.14.1
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
-    QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
-    QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
-    QRadialGradient)
+from PySide2.QtCore import *
+from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
@@ -22,9 +19,10 @@ import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
-        if MainWindow.objectName():
+        if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1500, 900)
+        MainWindow.resize(1642, 954)
+        MainWindow.setMaximumSize(QSize(10000, 10000))
         font = QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -351,6 +349,24 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
         self.mainBodyContent.setSizePolicy(sizePolicy2)
         self.mainBodyContent.setMinimumSize(QSize(327, 206))
+        palette = QPalette()
+        brush = QBrush(QColor(28, 40, 51, 255))
+        brush.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Button, brush)
+        brush1 = QBrush(QColor(40, 40, 40, 255))
+        brush1.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush1)
+        brush2 = QBrush(QColor(47, 47, 47, 255))
+        brush2.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.Button, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.Button, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush2)
+        self.mainBodyContent.setPalette(palette)
+        self.mainBodyContent.setMouseTracking(False)
         self.mainBodyContent.setStyleSheet(u"")
         self.horizontalLayout_7 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
@@ -374,8 +390,8 @@ class Ui_MainWindow(object):
         self.frame_10.setObjectName(u"frame_10")
         self.frame_10.setFrameShape(QFrame.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_12 = QHBoxLayout(self.frame_10)
-        self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
+        self.verticalLayout_22 = QVBoxLayout(self.frame_10)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
         self.HOR1Btn = QPushButton(self.frame_10)
         self.HOR1Btn.setObjectName(u"HOR1Btn")
         font1 = QFont()
@@ -384,27 +400,31 @@ class Ui_MainWindow(object):
         font1.setItalic(False)
         font1.setWeight(99)
         self.HOR1Btn.setFont(font1)
-        self.HOR1Btn.setStyleSheet(u"QPushButton {\n"
-"	background-color: rgb(152, 255, 96);\n"
+        self.HOR1Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
+"	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 170, 0);\n"
-"	border: 5px solid rgb(152, 255, 96);\n"
+"	background-color: rgb(0, 197, 95);\n"
+"	border: 1px solid rgb(85, 255, 127);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
         self.HOR1Btn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_12.addWidget(self.HOR1Btn)
+        self.verticalLayout_22.addWidget(self.HOR1Btn)
 
 
-        self.horizontalLayout_10.addWidget(self.frame_10)
+        self.horizontalLayout_10.addWidget(self.frame_10, 0, Qt.AlignTop)
 
         self.frame_9 = QFrame(self.frame_15)
         self.frame_9.setObjectName(u"frame_9")
@@ -416,28 +436,33 @@ class Ui_MainWindow(object):
         self.HOR2Btn = QPushButton(self.frame_9)
         self.HOR2Btn.setObjectName(u"HOR2Btn")
         self.HOR2Btn.setFont(font1)
-        self.HOR2Btn.setStyleSheet(u"QPushButton {\n"
-"	background-color: rgb(230, 0, 0);\n"
+        self.HOR2Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	background-color: rgb(200, 0, 0 / 85%);\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
+"	border: 1px solid rgb(255, 0, 0 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(170, 0, 0);\n"
-"	border: 5px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(220, 0, 0);\n"
+"	border: 1px solid rgb(255, 50, 50);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}\n"
+"\n"
 "")
         self.HOR2Btn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_11.addWidget(self.HOR2Btn)
 
 
-        self.horizontalLayout_10.addWidget(self.frame_9)
+        self.horizontalLayout_10.addWidget(self.frame_9, 0, Qt.AlignTop)
 
 
         self.verticalLayout_25.addWidget(self.frame_15)
@@ -480,11 +505,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_25.addWidget(self.notificaciones)
 
         self.mainPages.addWidget(self.menuPrincipal)
-        self.plancha3_1 = QWidget()
-        self.plancha3_1.setObjectName(u"plancha3_1")
-        self.verticalLayout_17 = QVBoxLayout(self.plancha3_1)
+        self.plancha2_2 = QWidget()
+        self.plancha2_2.setObjectName(u"plancha2_2")
+        self.verticalLayout_17 = QVBoxLayout(self.plancha2_2)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.frame_22 = QFrame(self.plancha3_1)
+        self.frame_22 = QFrame(self.plancha2_2)
         self.frame_22.setObjectName(u"frame_22")
         self.frame_22.setStyleSheet(u"#frame_22{\n"
 "	background-color: #fdfcf4;;\n"
@@ -527,7 +552,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.frame_22)
 
-        self.frame_17 = QFrame(self.plancha3_1)
+        self.frame_17 = QFrame(self.plancha2_2)
         self.frame_17.setObjectName(u"frame_17")
         self.frame_17.setFrameShape(QFrame.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Raised)
@@ -571,7 +596,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.frame_17)
 
-        self.frame_16 = QFrame(self.plancha3_1)
+        self.frame_16 = QFrame(self.plancha2_2)
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setFrameShape(QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QFrame.Raised)
@@ -587,13 +612,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -613,13 +639,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -637,13 +664,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -661,13 +689,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -685,13 +714,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -704,12 +734,13 @@ class Ui_MainWindow(object):
         self.pushButton_29.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -733,13 +764,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -757,13 +789,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -781,13 +814,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -800,12 +834,13 @@ class Ui_MainWindow(object):
         self.pushButton_30.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -822,7 +857,43 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_17.addWidget(self.frame_16)
 
-        self.mainPages.addWidget(self.plancha3_1)
+        self.frame_36 = QFrame(self.plancha2_2)
+        self.frame_36.setObjectName(u"frame_36")
+        self.frame_36.setFrameShape(QFrame.StyledPanel)
+        self.frame_36.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_27 = QVBoxLayout(self.frame_36)
+        self.verticalLayout_27.setObjectName(u"verticalLayout_27")
+        self.initMad_plancha2_horno2Btn = QPushButton(self.frame_36)
+        self.initMad_plancha2_horno2Btn.setObjectName(u"initMad_plancha2_horno2Btn")
+        self.initMad_plancha2_horno2Btn.setMaximumSize(QSize(16777215, 16777215))
+        self.initMad_plancha2_horno2Btn.setFont(font1)
+        self.initMad_plancha2_horno2Btn.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(194, 255, 156);\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 50%;\n"
+"	width: 300%;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(146, 216, 107);\n"
+"	border: 5px solid rgb(194, 255, 156);\n"
+"	border-width: 1px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"")
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/icons/log-in.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.initMad_plancha2_horno2Btn.setIcon(icon12)
+        self.initMad_plancha2_horno2Btn.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_27.addWidget(self.initMad_plancha2_horno2Btn)
+
+
+        self.verticalLayout_17.addWidget(self.frame_36, 0, Qt.AlignRight)
+
+        self.mainPages.addWidget(self.plancha2_2)
         self.plancha1_2 = QWidget()
         self.plancha1_2.setObjectName(u"plancha1_2")
         self.verticalLayout_18 = QVBoxLayout(self.plancha1_2)
@@ -929,14 +1000,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -954,13 +1025,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -978,14 +1050,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1003,14 +1075,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1028,14 +1100,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1048,18 +1120,19 @@ class Ui_MainWindow(object):
         self.pushButton_51.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(0, 197, 95);\n"
+"	border: 1px solid rgb(85, 255, 127);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1077,13 +1150,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1101,13 +1175,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1125,13 +1200,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1144,18 +1220,19 @@ class Ui_MainWindow(object):
         self.pushButton_57.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(0, 197, 95);\n"
+"	border: 1px solid rgb(85, 255, 127);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1165,6 +1242,43 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_18.addWidget(self.frame_25)
+
+        self.frame_35 = QFrame(self.plancha1_2)
+        self.frame_35.setObjectName(u"frame_35")
+        self.frame_35.setFrameShape(QFrame.StyledPanel)
+        self.frame_35.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_26 = QVBoxLayout(self.frame_35)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.iniciarMad_1Btn_4 = QPushButton(self.frame_35)
+        self.iniciarMad_1Btn_4.setObjectName(u"iniciarMad_1Btn_4")
+        self.iniciarMad_1Btn_4.setMaximumSize(QSize(16777215, 16777215))
+        self.iniciarMad_1Btn_4.setFont(font1)
+        self.iniciarMad_1Btn_4.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(194, 255, 156);\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 50%;\n"
+"	width: 300%;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(146, 216, 107);\n"
+"	border: 5px solid rgb(194, 255, 156);\n"
+"	border-width: 1px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.iniciarMad_1Btn_4.setIcon(icon12)
+        self.iniciarMad_1Btn_4.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_26.addWidget(self.iniciarMad_1Btn_4)
+
+
+        self.verticalLayout_18.addWidget(self.frame_35, 0, Qt.AlignRight)
 
         self.mainPages.addWidget(self.plancha1_2)
         self.planchasHor1 = QWidget()
@@ -1224,21 +1338,22 @@ class Ui_MainWindow(object):
 "}")
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
-        self.gridLayout_9 = QGridLayout(self.frame_12)
-        self.gridLayout_9.setObjectName(u"gridLayout_9")
-        self.gridLayout_9.setContentsMargins(-1, -1, -1, 0)
-        self.plancha5_1Btn = QPushButton(self.frame_12)
-        self.plancha5_1Btn.setObjectName(u"plancha5_1Btn")
-        self.plancha5_1Btn.setFont(font1)
-        self.plancha5_1Btn.setStyleSheet(u"QPushButton{\n"
+        self.verticalLayout_28 = QVBoxLayout(self.frame_12)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.verticalLayout_28.setContentsMargins(-1, -1, -1, 0)
+        self.plancha1_horno1Btn = QPushButton(self.frame_12)
+        self.plancha1_horno1Btn.setObjectName(u"plancha1_horno1Btn")
+        self.plancha1_horno1Btn.setFont(font1)
+        self.plancha1_horno1Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -1249,32 +1364,34 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha5_1Btn, 4, 0, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha1_horno1Btn)
 
-        self.plancha9_1Btn = QPushButton(self.frame_12)
-        self.plancha9_1Btn.setObjectName(u"plancha9_1Btn")
-        self.plancha9_1Btn.setFont(font1)
-        self.plancha9_1Btn.setStyleSheet(u"QPushButton{\n"
+        self.plancha2_horno1Btn = QPushButton(self.frame_12)
+        self.plancha2_horno1Btn.setObjectName(u"plancha2_horno1Btn")
+        self.plancha2_horno1Btn.setFont(font1)
+        self.plancha2_horno1Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
+"	background-color: rgb(200, 0, 0 / 85%);\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	border: 1px solid rgb(255, 0, 0 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(220, 0, 0);\n"
+"	border: 1px solid rgb(255, 50, 50);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
-"}")
+"}\n"
+"\n"
+"")
 
-        self.gridLayout_9.addWidget(self.plancha9_1Btn, 6, 0, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha2_horno1Btn)
 
         self.plancha3_1Btn = QPushButton(self.frame_12)
         self.plancha3_1Btn.setObjectName(u"plancha3_1Btn")
@@ -1287,18 +1404,19 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha3_1Btn, 3, 0, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha3_1Btn)
 
         self.plancha4_1Btn = QPushButton(self.frame_12)
         self.plancha4_1Btn.setObjectName(u"plancha4_1Btn")
@@ -1311,23 +1429,24 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha4_1Btn, 3, 1, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha4_1Btn)
 
-        self.plancha7_1Btn = QPushButton(self.frame_12)
-        self.plancha7_1Btn.setObjectName(u"plancha7_1Btn")
-        self.plancha7_1Btn.setFont(font1)
-        self.plancha7_1Btn.setStyleSheet(u"QPushButton{\n"
+        self.plancha5_1Btn = QPushButton(self.frame_12)
+        self.plancha5_1Btn.setObjectName(u"plancha5_1Btn")
+        self.plancha5_1Btn.setFont(font1)
+        self.plancha5_1Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -1335,116 +1454,19 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha7_1Btn, 5, 0, 1, 1)
-
-        self.plancha8_1Btn = QPushButton(self.frame_12)
-        self.plancha8_1Btn.setObjectName(u"plancha8_1Btn")
-        self.plancha8_1Btn.setFont(font1)
-        self.plancha8_1Btn.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_9.addWidget(self.plancha8_1Btn, 5, 1, 1, 1)
-
-        self.plancha11_1Btn = QPushButton(self.frame_12)
-        self.plancha11_1Btn.setObjectName(u"plancha11_1Btn")
-        self.plancha11_1Btn.setFont(font1)
-        self.plancha11_1Btn.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_9.addWidget(self.plancha11_1Btn, 7, 0, 1, 1)
-
-        self.plancha12_1Btn = QPushButton(self.frame_12)
-        self.plancha12_1Btn.setObjectName(u"plancha12_1Btn")
-        self.plancha12_1Btn.setFont(font1)
-        self.plancha12_1Btn.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_9.addWidget(self.plancha12_1Btn, 7, 1, 1, 1)
-
-        self.plancha2_1Btn = QPushButton(self.frame_12)
-        self.plancha2_1Btn.setObjectName(u"plancha2_1Btn")
-        self.plancha2_1Btn.setFont(font1)
-        self.plancha2_1Btn.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_9.addWidget(self.plancha2_1Btn, 2, 1, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha5_1Btn)
 
         self.plancha6_1Btn = QPushButton(self.frame_12)
         self.plancha6_1Btn.setObjectName(u"plancha6_1Btn")
@@ -1457,18 +1479,94 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha6_1Btn, 4, 1, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha6_1Btn)
+
+        self.plancha7_1Btn = QPushButton(self.frame_12)
+        self.plancha7_1Btn.setObjectName(u"plancha7_1Btn")
+        self.plancha7_1Btn.setFont(font1)
+        self.plancha7_1Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_28.addWidget(self.plancha7_1Btn)
+
+        self.plancha8_1Btn = QPushButton(self.frame_12)
+        self.plancha8_1Btn.setObjectName(u"plancha8_1Btn")
+        self.plancha8_1Btn.setFont(font1)
+        self.plancha8_1Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_28.addWidget(self.plancha8_1Btn)
+
+        self.plancha9_1Btn = QPushButton(self.frame_12)
+        self.plancha9_1Btn.setObjectName(u"plancha9_1Btn")
+        self.plancha9_1Btn.setFont(font1)
+        self.plancha9_1Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_28.addWidget(self.plancha9_1Btn)
 
         self.plancha10_1Btn = QPushButton(self.frame_12)
         self.plancha10_1Btn.setObjectName(u"plancha10_1Btn")
@@ -1481,24 +1579,24 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha10_1Btn, 6, 1, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha10_1Btn)
 
-        self.plancha1_1Btn = QPushButton(self.frame_12)
-        self.plancha1_1Btn.setObjectName(u"plancha1_1Btn")
-        self.plancha1_1Btn.setFont(font1)
-        self.plancha1_1Btn.setStyleSheet(u"QPushButton{\n"
+        self.plancha11_1Btn = QPushButton(self.frame_12)
+        self.plancha11_1Btn.setObjectName(u"plancha11_1Btn")
+        self.plancha11_1Btn.setFont(font1)
+        self.plancha11_1Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -1506,63 +1604,47 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 5px solid rgb(255, 82, 85);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_9.addWidget(self.plancha1_1Btn, 2, 0, 1, 1)
+        self.verticalLayout_28.addWidget(self.plancha11_1Btn)
 
-
-        self.verticalLayout_16.addWidget(self.frame_12)
-
-        self.frame_11 = QFrame(self.planchasHor1)
-        self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setStyleSheet(u"")
-        self.frame_11.setFrameShape(QFrame.StyledPanel)
-        self.frame_11.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_22 = QVBoxLayout(self.frame_11)
-        self.verticalLayout_22.setSpacing(9)
-        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
-        self.verticalLayout_22.setContentsMargins(0, 0, 0, 0)
-        self.iniciarMad_1Btn = QPushButton(self.frame_11)
-        self.iniciarMad_1Btn.setObjectName(u"iniciarMad_1Btn")
-        self.iniciarMad_1Btn.setMaximumSize(QSize(16777215, 16777215))
-        self.iniciarMad_1Btn.setFont(font1)
-        self.iniciarMad_1Btn.setStyleSheet(u"QPushButton {\n"
-"	background-color: rgb(194, 255, 156);\n"
+        self.plancha12_1Btn = QPushButton(self.frame_12)
+        self.plancha12_1Btn.setObjectName(u"plancha12_1Btn")
+        self.plancha12_1Btn.setFont(font1)
+        self.plancha12_1Btn.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
-"	height: 50%;\n"
-"	width: 300%;\n"
-"	border-radius: 20px;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(146, 216, 107);\n"
-"	border: 5px solid rgb(194, 255, 156);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
-"	border-radius: 20px;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/icons/log-in.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.iniciarMad_1Btn.setIcon(icon12)
-        self.iniciarMad_1Btn.setIconSize(QSize(30, 30))
+"	border-radius: 5px;\n"
+"}")
 
-        self.verticalLayout_22.addWidget(self.iniciarMad_1Btn, 0, Qt.AlignRight|Qt.AlignBottom)
+        self.verticalLayout_28.addWidget(self.plancha12_1Btn)
 
 
-        self.verticalLayout_16.addWidget(self.frame_11, 0, Qt.AlignRight|Qt.AlignBottom)
+        self.verticalLayout_16.addWidget(self.frame_12, 0, Qt.AlignTop)
 
         self.mainPages.addWidget(self.planchasHor1)
         self.plancha1_1 = QWidget()
@@ -1650,7 +1732,7 @@ class Ui_MainWindow(object):
         self.label_8.setFont(font)
         self.label_8.setStyleSheet(u"color: #ffffff;")
 
-        self.gridLayout_3.addWidget(self.label_8, 0, 0, 1, 1, Qt.AlignLeft|Qt.AlignVCenter)
+        self.gridLayout_3.addWidget(self.label_8, 0, 0, 1, 1)
 
 
         self.verticalLayout_23.addWidget(self.frame_18, 0, Qt.AlignTop)
@@ -1662,125 +1744,57 @@ class Ui_MainWindow(object):
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_13)
         self.gridLayout.setObjectName(u"gridLayout")
+        self.pushButton_10 = QPushButton(self.frame_13)
+        self.pushButton_10.setObjectName(u"pushButton_10")
+        self.pushButton_10.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_10.setIcon(icon11)
+
+        self.gridLayout.addWidget(self.pushButton_10, 4, 1, 1, 1)
+
         self.pushButton_9 = QPushButton(self.frame_13)
         self.pushButton_9.setObjectName(u"pushButton_9")
         self.pushButton_9.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
+"	background-color: rgb(200, 0, 0 / 85%);\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
+"	border: 1px solid rgb(255, 0, 0 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
+"	background-color: rgb(220, 0, 0);\n"
+"	border: 1px solid rgb(255, 50, 50);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
-"}")
+"}\n"
+"\n"
+"")
         self.pushButton_9.setIcon(icon11)
 
         self.gridLayout.addWidget(self.pushButton_9, 0, 0, 1, 1)
-
-        self.pushButton_5 = QPushButton(self.frame_13)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_5.setIcon(icon11)
-
-        self.gridLayout.addWidget(self.pushButton_5, 0, 1, 1, 1)
-
-        self.pushButton_6 = QPushButton(self.frame_13)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_6.setIcon(icon11)
-
-        self.gridLayout.addWidget(self.pushButton_6, 1, 0, 1, 1)
-
-        self.pushButton_2 = QPushButton(self.frame_13)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_2.setIcon(icon11)
-
-        self.gridLayout.addWidget(self.pushButton_2, 1, 1, 1, 1)
-
-        self.pushButton_7 = QPushButton(self.frame_13)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_7.setIcon(icon11)
-
-        self.gridLayout.addWidget(self.pushButton_7, 2, 0, 1, 1)
 
         self.pushButton_8 = QPushButton(self.frame_13)
         self.pushButton_8.setObjectName(u"pushButton_8")
@@ -1792,43 +1806,20 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
         self.pushButton_8.setIcon(icon11)
 
         self.gridLayout.addWidget(self.pushButton_8, 2, 1, 1, 1)
-
-        self.pushButton = QPushButton(self.frame_13)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton.setIcon(icon11)
-
-        self.gridLayout.addWidget(self.pushButton, 3, 0, 1, 1)
 
         self.pushButton_4 = QPushButton(self.frame_13)
         self.pushButton_4.setObjectName(u"pushButton_4")
@@ -1840,14 +1831,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1865,14 +1856,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -1880,9 +1871,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.pushButton_3, 4, 0, 1, 1)
 
-        self.pushButton_10 = QPushButton(self.frame_13)
-        self.pushButton_10.setObjectName(u"pushButton_10")
-        self.pushButton_10.setStyleSheet(u"QPushButton{\n"
+        self.pushButton_6 = QPushButton(self.frame_13)
+        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.pushButton_6.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -1890,23 +1881,160 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
-        self.pushButton_10.setIcon(icon11)
+        self.pushButton_6.setIcon(icon11)
 
-        self.gridLayout.addWidget(self.pushButton_10, 4, 1, 1, 1)
+        self.gridLayout.addWidget(self.pushButton_6, 1, 0, 1, 1)
+
+        self.pushButton_7 = QPushButton(self.frame_13)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+        self.pushButton_7.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_7.setIcon(icon11)
+
+        self.gridLayout.addWidget(self.pushButton_7, 2, 0, 1, 1)
+
+        self.pushButton_2 = QPushButton(self.frame_13)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_2.setIcon(icon11)
+
+        self.gridLayout.addWidget(self.pushButton_2, 1, 1, 1, 1)
+
+        self.pushButton_5 = QPushButton(self.frame_13)
+        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.pushButton_5.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(0, 197, 95);\n"
+"	border: 1px solid rgb(85, 255, 127);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_5.setIcon(icon11)
+
+        self.gridLayout.addWidget(self.pushButton_5, 0, 1, 1, 1)
+
+        self.pushButton = QPushButton(self.frame_13)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton.setIcon(icon11)
+
+        self.gridLayout.addWidget(self.pushButton, 3, 0, 1, 1)
 
 
         self.verticalLayout_23.addWidget(self.frame_13)
+
+        self.frame_28 = QFrame(self.plancha1_1)
+        self.frame_28.setObjectName(u"frame_28")
+        self.frame_28.setFrameShape(QFrame.StyledPanel)
+        self.frame_28.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.frame_28)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.initMad_plancha1_horno1Btn = QPushButton(self.frame_28)
+        self.initMad_plancha1_horno1Btn.setObjectName(u"initMad_plancha1_horno1Btn")
+        self.initMad_plancha1_horno1Btn.setMaximumSize(QSize(16777215, 16777215))
+        self.initMad_plancha1_horno1Btn.setFont(font1)
+        self.initMad_plancha1_horno1Btn.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(194, 255, 156);\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 50%;\n"
+"	width: 300%;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(146, 216, 107);\n"
+"	border: 5px solid rgb(194, 255, 156);\n"
+"	border-width: 1px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.initMad_plancha1_horno1Btn.setIcon(icon12)
+        self.initMad_plancha1_horno1Btn.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_13.addWidget(self.initMad_plancha1_horno1Btn, 0, Qt.AlignRight|Qt.AlignBottom)
+
+
+        self.verticalLayout_23.addWidget(self.frame_28)
 
         self.mainPages.addWidget(self.plancha1_1)
         self.plancha2_1 = QWidget()
@@ -2011,9 +2139,9 @@ class Ui_MainWindow(object):
         self.frame_29.setFrameShadow(QFrame.Raised)
         self.gridLayout_7 = QGridLayout(self.frame_29)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
-        self.pushButton_41 = QPushButton(self.frame_29)
-        self.pushButton_41.setObjectName(u"pushButton_41")
-        self.pushButton_41.setStyleSheet(u"QPushButton{\n"
+        self.pushButton_35 = QPushButton(self.frame_29)
+        self.pushButton_35.setObjectName(u"pushButton_35")
+        self.pushButton_35.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -2021,32 +2149,58 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
-        self.pushButton_41.setIcon(icon11)
+        self.pushButton_35.setIcon(icon11)
 
-        self.gridLayout_7.addWidget(self.pushButton_41, 3, 0, 1, 1)
+        self.gridLayout_7.addWidget(self.pushButton_35, 1, 1, 1, 1)
+
+        self.pushButton_42 = QPushButton(self.frame_29)
+        self.pushButton_42.setObjectName(u"pushButton_42")
+        self.pushButton_42.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_42.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_42, 3, 1, 1, 1)
 
         self.pushButton_37 = QPushButton(self.frame_29)
         self.pushButton_37.setObjectName(u"pushButton_37")
         self.pushButton_37.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -2060,9 +2214,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.pushButton_37, 0, 0, 1, 1)
 
-        self.pushButton_38 = QPushButton(self.frame_29)
-        self.pushButton_38.setObjectName(u"pushButton_38")
-        self.pushButton_38.setStyleSheet(u"QPushButton{\n"
+        self.pushButton_39 = QPushButton(self.frame_29)
+        self.pushButton_39.setObjectName(u"pushButton_39")
+        self.pushButton_39.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -2070,7 +2224,133 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_39.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_39, 2, 0, 1, 1)
+
+        self.pushButton_41 = QPushButton(self.frame_29)
+        self.pushButton_41.setObjectName(u"pushButton_41")
+        self.pushButton_41.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_41.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_41, 3, 0, 1, 1)
+
+        self.pushButton_36 = QPushButton(self.frame_29)
+        self.pushButton_36.setObjectName(u"pushButton_36")
+        self.pushButton_36.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_36.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_36, 1, 0, 1, 1)
+
+        self.pushButton_44 = QPushButton(self.frame_29)
+        self.pushButton_44.setObjectName(u"pushButton_44")
+        self.pushButton_44.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_44.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_44, 4, 1, 1, 1)
+
+        self.pushButton_43 = QPushButton(self.frame_29)
+        self.pushButton_43.setObjectName(u"pushButton_43")
+        self.pushButton_43.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+        self.pushButton_43.setIcon(icon11)
+
+        self.gridLayout_7.addWidget(self.pushButton_43, 4, 0, 1, 1)
+
+        self.pushButton_38 = QPushButton(self.frame_29)
+        self.pushButton_38.setObjectName(u"pushButton_38")
+        self.pushButton_38.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -2084,79 +2364,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.pushButton_38, 0, 1, 1, 1)
 
-        self.pushButton_39 = QPushButton(self.frame_29)
-        self.pushButton_39.setObjectName(u"pushButton_39")
-        self.pushButton_39.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_39.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_39, 2, 0, 1, 1)
-
-        self.pushButton_35 = QPushButton(self.frame_29)
-        self.pushButton_35.setObjectName(u"pushButton_35")
-        self.pushButton_35.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_35.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_35, 1, 1, 1, 1)
-
-        self.pushButton_36 = QPushButton(self.frame_29)
-        self.pushButton_36.setObjectName(u"pushButton_36")
-        self.pushButton_36.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_36.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_36, 1, 0, 1, 1)
-
         self.pushButton_40 = QPushButton(self.frame_29)
         self.pushButton_40.setObjectName(u"pushButton_40")
         self.pushButton_40.setStyleSheet(u"QPushButton{\n"
@@ -2167,14 +2374,14 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
@@ -2182,83 +2389,45 @@ class Ui_MainWindow(object):
 
         self.gridLayout_7.addWidget(self.pushButton_40, 2, 1, 1, 1)
 
-        self.pushButton_42 = QPushButton(self.frame_29)
-        self.pushButton_42.setObjectName(u"pushButton_42")
-        self.pushButton_42.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_42.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_42, 3, 1, 1, 1)
-
-        self.pushButton_43 = QPushButton(self.frame_29)
-        self.pushButton_43.setObjectName(u"pushButton_43")
-        self.pushButton_43.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_43.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_43, 4, 0, 1, 1)
-
-        self.pushButton_44 = QPushButton(self.frame_29)
-        self.pushButton_44.setObjectName(u"pushButton_44")
-        self.pushButton_44.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-        self.pushButton_44.setIcon(icon11)
-
-        self.gridLayout_7.addWidget(self.pushButton_44, 4, 1, 1, 1)
-
 
         self.verticalLayout_32.addWidget(self.frame_29)
+
+        self.frame_34 = QFrame(self.plancha2_1)
+        self.frame_34.setObjectName(u"frame_34")
+        self.frame_34.setFrameShape(QFrame.StyledPanel)
+        self.frame_34.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_21 = QVBoxLayout(self.frame_34)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.initMad_plancha2_horno1Btn = QPushButton(self.frame_34)
+        self.initMad_plancha2_horno1Btn.setObjectName(u"initMad_plancha2_horno1Btn")
+        self.initMad_plancha2_horno1Btn.setMaximumSize(QSize(16777215, 16777215))
+        self.initMad_plancha2_horno1Btn.setFont(font1)
+        self.initMad_plancha2_horno1Btn.setStyleSheet(u"QPushButton {\n"
+"	background-color: rgb(194, 255, 156);\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 50%;\n"
+"	width: 300%;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(146, 216, 107);\n"
+"	border: 5px solid rgb(194, 255, 156);\n"
+"	border-width: 1px;\n"
+"	border-radius: 20px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.initMad_plancha2_horno1Btn.setIcon(icon12)
+        self.initMad_plancha2_horno1Btn.setIconSize(QSize(30, 30))
+
+        self.verticalLayout_21.addWidget(self.initMad_plancha2_horno1Btn)
+
+
+        self.verticalLayout_32.addWidget(self.frame_34, 0, Qt.AlignRight)
 
         self.mainPages.addWidget(self.plancha2_1)
         self.planchasHor2 = QWidget()
@@ -2306,7 +2475,7 @@ class Ui_MainWindow(object):
 "")
         self.backHor2Btn.setIcon(icon10)
 
-        self.horizontalLayout_15.addWidget(self.backHor2Btn, 0, Qt.AlignRight|Qt.AlignVCenter)
+        self.horizontalLayout_15.addWidget(self.backHor2Btn)
 
 
         self.verticalLayout_33.addWidget(self.frame_20)
@@ -2315,20 +2484,21 @@ class Ui_MainWindow(object):
         self.frame_32.setObjectName(u"frame_32")
         self.frame_32.setFrameShape(QFrame.StyledPanel)
         self.frame_32.setFrameShadow(QFrame.Raised)
-        self.gridLayout_2 = QGridLayout(self.frame_32)
-        self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.pushButton_20 = QPushButton(self.frame_32)
-        self.pushButton_20.setObjectName(u"pushButton_20")
-        self.pushButton_20.setFont(font1)
-        self.pushButton_20.setStyleSheet(u"QPushButton{\n"
+        self.verticalLayout_29 = QVBoxLayout(self.frame_32)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.plancha1_horno2Btn = QPushButton(self.frame_32)
+        self.plancha1_horno2Btn.setObjectName(u"plancha1_horno2Btn")
+        self.plancha1_horno2Btn.setFont(font1)
+        self.plancha1_horno2Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -2339,20 +2509,21 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.pushButton_20, 5, 0, 1, 1)
+        self.verticalLayout_29.addWidget(self.plancha1_horno2Btn)
 
-        self.pushButton_12 = QPushButton(self.frame_32)
-        self.pushButton_12.setObjectName(u"pushButton_12")
-        self.pushButton_12.setFont(font1)
-        self.pushButton_12.setStyleSheet(u"QPushButton{\n"
+        self.plancha2_horno2Btn = QPushButton(self.frame_32)
+        self.plancha2_horno2Btn.setObjectName(u"plancha2_horno2Btn")
+        self.plancha2_horno2Btn.setFont(font1)
+        self.plancha2_horno2Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
+"	background-color: rgb(0, 197, 95 / 85%);\n"
 "	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	border: 1px solid rgb(85, 255, 127 / 20%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -2363,203 +2534,7 @@ class Ui_MainWindow(object):
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.pushButton_12, 5, 1, 1, 1)
-
-        self.pushButton_55 = QPushButton(self.frame_32)
-        self.pushButton_55.setObjectName(u"pushButton_55")
-        self.pushButton_55.setFont(font1)
-        self.pushButton_55.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_55, 6, 1, 1, 1)
-
-        self.pushButton_11 = QPushButton(self.frame_32)
-        self.pushButton_11.setObjectName(u"pushButton_11")
-        self.pushButton_11.setFont(font1)
-        self.pushButton_11.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_11, 3, 1, 1, 1)
-
-        self.pushButton_14 = QPushButton(self.frame_32)
-        self.pushButton_14.setObjectName(u"pushButton_14")
-        self.pushButton_14.setFont(font1)
-        self.pushButton_14.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_14, 6, 0, 1, 1)
-
-        self.plancha1_2Btn = QPushButton(self.frame_32)
-        self.plancha1_2Btn.setObjectName(u"plancha1_2Btn")
-        self.plancha1_2Btn.setFont(font1)
-        self.plancha1_2Btn.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(255, 82, 85);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(230, 0, 0);\n"
-"	border: 1px solid rgb(255, 0, 0);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.plancha1_2Btn, 1, 0, 1, 1)
-
-        self.pushButton_17 = QPushButton(self.frame_32)
-        self.pushButton_17.setObjectName(u"pushButton_17")
-        self.pushButton_17.setFont(font1)
-        self.pushButton_17.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_17, 4, 0, 1, 1)
-
-        self.pushButton_19 = QPushButton(self.frame_32)
-        self.pushButton_19.setObjectName(u"pushButton_19")
-        self.pushButton_19.setFont(font1)
-        self.pushButton_19.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_19, 4, 1, 1, 1)
-
-        self.pushButton_18 = QPushButton(self.frame_32)
-        self.pushButton_18.setObjectName(u"pushButton_18")
-        self.pushButton_18.setFont(font1)
-        self.pushButton_18.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_18, 2, 0, 1, 1)
-
-        self.pushButton_54 = QPushButton(self.frame_32)
-        self.pushButton_54.setObjectName(u"pushButton_54")
-        self.pushButton_54.setFont(font1)
-        self.pushButton_54.setStyleSheet(u"QPushButton{\n"
-"	color: #ffffff;\n"
-"	width: 70%;	\n"
-"	height: 100%;\n"
-"	font-style: normal;\n"
-"	font-weight: 800;\n"
-"	height: 200%;\n"
-"	width: 250%;\n"
-"	background-color: rgb(197, 195, 173);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(161, 156, 137);\n"
-"	border: 1px solid rgb(255, 254, 216);\n"
-"	border-width: 1px;\n"
-"	border-radius: 5px;\n"
-"}")
-
-        self.gridLayout_2.addWidget(self.pushButton_54, 1, 1, 1, 1)
+        self.verticalLayout_29.addWidget(self.plancha2_horno2Btn)
 
         self.pushButton_16 = QPushButton(self.frame_32)
         self.pushButton_16.setObjectName(u"pushButton_16")
@@ -2572,18 +2547,44 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.pushButton_16, 2, 1, 1, 1)
+        self.verticalLayout_29.addWidget(self.pushButton_16)
+
+        self.pushButton_18 = QPushButton(self.frame_32)
+        self.pushButton_18.setObjectName(u"pushButton_18")
+        self.pushButton_18.setFont(font1)
+        self.pushButton_18.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_18)
 
         self.pushButton_15 = QPushButton(self.frame_32)
         self.pushButton_15.setObjectName(u"pushButton_15")
@@ -2596,58 +2597,197 @@ class Ui_MainWindow(object):
 "	font-weight: 800;\n"
 "	height: 200%;\n"
 "	width: 250%;\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
 "	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(0, 197, 95);\n"
-"	border: 1px solid rgb(85, 255, 127);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
 
-        self.gridLayout_2.addWidget(self.pushButton_15, 3, 0, 1, 1)
+        self.verticalLayout_29.addWidget(self.pushButton_15)
 
-
-        self.verticalLayout_33.addWidget(self.frame_32)
-
-        self.frame_31 = QFrame(self.planchasHor2)
-        self.frame_31.setObjectName(u"frame_31")
-        self.frame_31.setStyleSheet(u"")
-        self.frame_31.setFrameShape(QFrame.StyledPanel)
-        self.frame_31.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_34 = QVBoxLayout(self.frame_31)
-        self.verticalLayout_34.setSpacing(0)
-        self.verticalLayout_34.setObjectName(u"verticalLayout_34")
-        self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
-        self.iniciarMad_2Btn = QPushButton(self.frame_31)
-        self.iniciarMad_2Btn.setObjectName(u"iniciarMad_2Btn")
-        self.iniciarMad_2Btn.setMaximumSize(QSize(16777215, 16777215))
-        self.iniciarMad_2Btn.setFont(font1)
-        self.iniciarMad_2Btn.setStyleSheet(u"QPushButton {\n"
-"	background-color: rgb(194, 255, 156);\n"
+        self.pushButton_11 = QPushButton(self.frame_32)
+        self.pushButton_11.setObjectName(u"pushButton_11")
+        self.pushButton_11.setFont(font1)
+        self.pushButton_11.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
 "	font-style: normal;\n"
 "	font-weight: 800;\n"
-"	height: 50%;\n"
-"	width: 300%;\n"
-"	border-radius: 20px;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(146, 216, 107);\n"
-"	border: 5px solid rgb(194, 255, 156);\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
 "	border-width: 1px;\n"
-"	border-radius: 20px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_11)
+
+        self.pushButton_19 = QPushButton(self.frame_32)
+        self.pushButton_19.setObjectName(u"pushButton_19")
+        self.pushButton_19.setFont(font1)
+        self.pushButton_19.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
 "}\n"
-"")
-        self.iniciarMad_2Btn.setIcon(icon12)
-        self.iniciarMad_2Btn.setIconSize(QSize(30, 30))
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
 
-        self.verticalLayout_34.addWidget(self.iniciarMad_2Btn, 0, Qt.AlignRight|Qt.AlignBottom)
+        self.verticalLayout_29.addWidget(self.pushButton_19)
+
+        self.pushButton_17 = QPushButton(self.frame_32)
+        self.pushButton_17.setObjectName(u"pushButton_17")
+        self.pushButton_17.setFont(font1)
+        self.pushButton_17.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_17)
+
+        self.pushButton_12 = QPushButton(self.frame_32)
+        self.pushButton_12.setObjectName(u"pushButton_12")
+        self.pushButton_12.setFont(font1)
+        self.pushButton_12.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_12)
+
+        self.pushButton_20 = QPushButton(self.frame_32)
+        self.pushButton_20.setObjectName(u"pushButton_20")
+        self.pushButton_20.setFont(font1)
+        self.pushButton_20.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_20)
+
+        self.pushButton_14 = QPushButton(self.frame_32)
+        self.pushButton_14.setObjectName(u"pushButton_14")
+        self.pushButton_14.setFont(font1)
+        self.pushButton_14.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_14)
+
+        self.pushButton_55 = QPushButton(self.frame_32)
+        self.pushButton_55.setObjectName(u"pushButton_55")
+        self.pushButton_55.setFont(font1)
+        self.pushButton_55.setStyleSheet(u"QPushButton{\n"
+"	color: #ffffff;\n"
+"	width: 70%;	\n"
+"	height: 100%;\n"
+"	font-style: normal;\n"
+"	font-weight: 800;\n"
+"	height: 200%;\n"
+"	width: 250%;\n"
+"	background-color: rgb(60, 60, 60 );\n"
+"	border: 1px solid rgb(30, 30, 30 / 50%);\n"
+"	border-radius: 5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(60, 60, 60);\n"
+"	border: 1px solid rgb(100, 100, 100);\n"
+"	border-width: 1px;\n"
+"	border-radius: 5px;\n"
+"}")
+
+        self.verticalLayout_29.addWidget(self.pushButton_55)
 
 
-        self.verticalLayout_33.addWidget(self.frame_31, 0, Qt.AlignRight|Qt.AlignBottom)
+        self.verticalLayout_33.addWidget(self.frame_32)
 
         self.mainPages.addWidget(self.planchasHor2)
         self.baseDeDatos = QWidget()
@@ -2889,7 +3029,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(3)
+        self.mainPages.setCurrentIndex(0)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -2944,11 +3084,11 @@ class Ui_MainWindow(object):
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"Notificaciones", None))
         self.label_37.setText(QCoreApplication.translate("MainWindow", u"Error detectado de tensi\u00f3n en HORNO 1, Plancha 2", None))
         self.label_36.setText(QCoreApplication.translate("MainWindow", u"Error detectado en HORNO1, Plancha 1, Posicion (1,3)", None))
-        self.label_30.setText(QCoreApplication.translate("MainWindow", u"HORNO 1", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"HORNO 2", None))
         self.backPlancha3Hor1Btn.setText("")
         self.label_27.setText(QCoreApplication.translate("MainWindow", u"Temperatura:", None))
         self.label_26.setText(QCoreApplication.translate("MainWindow", u"Tension:", None))
-        self.label_25.setText(QCoreApplication.translate("MainWindow", u"Plancha 3", None))
+        self.label_25.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
         self.label_28.setText(QCoreApplication.translate("MainWindow", u"3,9 V", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"98 \u00ba C", None))
         self.pushButton_33.setText(QCoreApplication.translate("MainWindow", u"8", None))
@@ -2961,6 +3101,7 @@ class Ui_MainWindow(object):
         self.pushButton_28.setText(QCoreApplication.translate("MainWindow", u"3", None))
         self.pushButton_31.setText(QCoreApplication.translate("MainWindow", u"4", None))
         self.pushButton_30.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.initMad_plancha2_horno2Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_24.setText(QCoreApplication.translate("MainWindow", u"HORNO 2", None))
         self.backPlancha1Hor2Btn.setText("")
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"Temperatura:", None))
@@ -2978,24 +3119,24 @@ class Ui_MainWindow(object):
         self.pushButton_53.setText(QCoreApplication.translate("MainWindow", u"3", None))
         self.pushButton_56.setText(QCoreApplication.translate("MainWindow", u"4", None))
         self.pushButton_57.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.iniciarMad_1Btn_4.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"HORNO 1", None))
 #if QT_CONFIG(tooltip)
         self.backHor1Btn.setToolTip(QCoreApplication.translate("MainWindow", u"Atr\u00e1s", None))
 #endif // QT_CONFIG(tooltip)
         self.backHor1Btn.setText("")
-        self.plancha5_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 5", None))
-        self.plancha9_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 9", None))
+        self.plancha1_horno1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
+        self.plancha2_horno1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
         self.plancha3_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 3", None))
         self.plancha4_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 4", None))
+        self.plancha5_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 5", None))
+        self.plancha6_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 6", None))
         self.plancha7_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 7", None))
         self.plancha8_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 8", None))
+        self.plancha9_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 9", None))
+        self.plancha10_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 10", None))
         self.plancha11_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 11", None))
         self.plancha12_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 12", None))
-        self.plancha2_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
-        self.plancha6_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 6", None))
-        self.plancha10_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 10", None))
-        self.plancha1_1Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
-        self.iniciarMad_1Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"HORNO 1", None))
 #if QT_CONFIG(tooltip)
         self.backPlancha1Hor1Btn.setToolTip(QCoreApplication.translate("MainWindow", u"Atr\u00e1s", None))
@@ -3006,16 +3147,17 @@ class Ui_MainWindow(object):
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"2,9 V", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Tension: ", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
+        self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"10", None))
         self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"3", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"4", None))
-        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"6", None))
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"7", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"8", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"9", None))
-        self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.initMad_plancha1_horno1Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"HORNO 1", None))
         self.backPlancha2Hor1Btn.setText("")
         self.label_19.setText(QCoreApplication.translate("MainWindow", u"Temperatura:", None))
@@ -3023,31 +3165,31 @@ class Ui_MainWindow(object):
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
         self.label_22.setText(QCoreApplication.translate("MainWindow", u"2,9 V", None))
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"100 \u00b0C", None))
-        self.pushButton_41.setText(QCoreApplication.translate("MainWindow", u"7", None))
-        self.pushButton_37.setText(QCoreApplication.translate("MainWindow", u"1", None))
-        self.pushButton_38.setText(QCoreApplication.translate("MainWindow", u"2", None))
-        self.pushButton_39.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.pushButton_35.setText(QCoreApplication.translate("MainWindow", u"4", None))
-        self.pushButton_36.setText(QCoreApplication.translate("MainWindow", u"3", None))
-        self.pushButton_40.setText(QCoreApplication.translate("MainWindow", u"6", None))
         self.pushButton_42.setText(QCoreApplication.translate("MainWindow", u"8", None))
-        self.pushButton_43.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.pushButton_37.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.pushButton_39.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.pushButton_41.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.pushButton_36.setText(QCoreApplication.translate("MainWindow", u"3", None))
         self.pushButton_44.setText(QCoreApplication.translate("MainWindow", u"10", None))
+        self.pushButton_43.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.pushButton_38.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.pushButton_40.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.initMad_plancha2_horno1Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_21.setText(QCoreApplication.translate("MainWindow", u"HORNO 2", None))
         self.backHor2Btn.setText("")
-        self.pushButton_20.setText(QCoreApplication.translate("MainWindow", u"Plancha 9", None))
-        self.pushButton_12.setText(QCoreApplication.translate("MainWindow", u"Plancha 10", None))
-        self.pushButton_55.setText(QCoreApplication.translate("MainWindow", u"Plancha 12", None))
-        self.pushButton_11.setText(QCoreApplication.translate("MainWindow", u"Plancha 6", None))
-        self.pushButton_14.setText(QCoreApplication.translate("MainWindow", u"Plancha 11", None))
-        self.plancha1_2Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
-        self.pushButton_17.setText(QCoreApplication.translate("MainWindow", u"Plancha 7", None))
-        self.pushButton_19.setText(QCoreApplication.translate("MainWindow", u"Plancha 8", None))
-        self.pushButton_18.setText(QCoreApplication.translate("MainWindow", u"Plancha 3", None))
-        self.pushButton_54.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
+        self.plancha1_horno2Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
+        self.plancha2_horno2Btn.setText(QCoreApplication.translate("MainWindow", u"Plancha 2", None))
         self.pushButton_16.setText(QCoreApplication.translate("MainWindow", u"Plancha 4", None))
+        self.pushButton_18.setText(QCoreApplication.translate("MainWindow", u"Plancha 3", None))
         self.pushButton_15.setText(QCoreApplication.translate("MainWindow", u"Plancha 5", None))
-        self.iniciarMad_2Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
+        self.pushButton_11.setText(QCoreApplication.translate("MainWindow", u"Plancha 6", None))
+        self.pushButton_19.setText(QCoreApplication.translate("MainWindow", u"Plancha 8", None))
+        self.pushButton_17.setText(QCoreApplication.translate("MainWindow", u"Plancha 7", None))
+        self.pushButton_12.setText(QCoreApplication.translate("MainWindow", u"Plancha 10", None))
+        self.pushButton_20.setText(QCoreApplication.translate("MainWindow", u"Plancha 9", None))
+        self.pushButton_14.setText(QCoreApplication.translate("MainWindow", u"Plancha 11", None))
+        self.pushButton_55.setText(QCoreApplication.translate("MainWindow", u"Plancha 12", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"BASE DE DATOS", None))
         self.backDBBtn.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"INFO A DETERMINAR", None))
