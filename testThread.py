@@ -11,6 +11,8 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
+import BoardManagers as BD
+
 from PyQt5.QtCore import QObject, QThread, pyqtSignal
 # Snip...
 
@@ -25,7 +27,27 @@ class Worker(QObject):
             sleep(1)
             self.progress.emit(i + 1)
         self.finished.emit()
+
+
+
+
+
+
+class StatusCheckThread(QObject):
+    update_board_status = pyqtSignal(int)
+    update_ui = pyqtSignal(int)
+
+
+    def run(self):
+        """Long-running task."""
+        while True:
+            sleep(1)
+            self.update_board_status.emit(i + 1)
+            self.update_ui.emit()
+            
+        
     
+
 
 class Window(QMainWindow):
     def __init__(self, parent=None):

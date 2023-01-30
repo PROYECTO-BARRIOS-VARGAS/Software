@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacesBeZSG.ui'
+## Form generated from reading UI file 'interfaceQdFdSM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,8 +21,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1642, 954)
-        MainWindow.setMaximumSize(QSize(10000, 10000))
+        MainWindow.resize(1434, 805)
+        MainWindow.setMaximumSize(QSize(1920, 1080))
         font = QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -353,18 +353,14 @@ class Ui_MainWindow(object):
         brush = QBrush(QColor(28, 40, 51, 255))
         brush.setStyle(Qt.SolidPattern)
         palette.setBrush(QPalette.Active, QPalette.Button, brush)
-        brush1 = QBrush(QColor(40, 40, 40, 255))
-        brush1.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Base, brush1)
-        brush2 = QBrush(QColor(47, 47, 47, 255))
-        brush2.setStyle(Qt.SolidPattern)
-        palette.setBrush(QPalette.Active, QPalette.Window, brush2)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush)
         palette.setBrush(QPalette.Inactive, QPalette.Button, brush)
-        palette.setBrush(QPalette.Inactive, QPalette.Base, brush1)
-        palette.setBrush(QPalette.Inactive, QPalette.Window, brush2)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush)
         palette.setBrush(QPalette.Disabled, QPalette.Button, brush)
-        palette.setBrush(QPalette.Disabled, QPalette.Base, brush2)
-        palette.setBrush(QPalette.Disabled, QPalette.Window, brush2)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush)
         self.mainBodyContent.setPalette(palette)
         self.mainBodyContent.setMouseTracking(False)
         self.mainBodyContent.setStyleSheet(u"")
@@ -1769,9 +1765,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.pushButton_10, 4, 1, 1, 1)
 
-        self.pushButton_9 = QPushButton(self.frame_13)
-        self.pushButton_9.setObjectName(u"pushButton_9")
-        self.pushButton_9.setStyleSheet(u"QPushButton{\n"
+        self.p1h1_ipg1_Btn = QPushButton(self.frame_13)
+        self.p1h1_ipg1_Btn.setObjectName(u"p1h1_ipg1_Btn")
+        self.p1h1_ipg1_Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	height: 100%;\n"
@@ -1792,9 +1788,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.pushButton_9.setIcon(icon11)
+        self.p1h1_ipg1_Btn.setIcon(icon11)
 
-        self.gridLayout.addWidget(self.pushButton_9, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.p1h1_ipg1_Btn, 0, 0, 1, 1)
 
         self.pushButton_8 = QPushButton(self.frame_13)
         self.pushButton_8.setObjectName(u"pushButton_8")
@@ -1946,9 +1942,9 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.pushButton_2, 1, 1, 1, 1)
 
-        self.pushButton_5 = QPushButton(self.frame_13)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setStyleSheet(u"QPushButton{\n"
+        self.p1h1_ipg2_Btn = QPushButton(self.frame_13)
+        self.p1h1_ipg2_Btn.setObjectName(u"p1h1_ipg2_Btn")
+        self.p1h1_ipg2_Btn.setStyleSheet(u"QPushButton{\n"
 "	color: #ffffff;\n"
 "	width: 70%;	\n"
 "	background-color: rgb(0, 197, 95 / 85%);\n"
@@ -1967,9 +1963,9 @@ class Ui_MainWindow(object):
 "	border-width: 1px;\n"
 "	border-radius: 5px;\n"
 "}")
-        self.pushButton_5.setIcon(icon11)
+        self.p1h1_ipg2_Btn.setIcon(icon11)
 
-        self.gridLayout.addWidget(self.pushButton_5, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.p1h1_ipg2_Btn, 0, 1, 1, 1)
 
         self.pushButton = QPushButton(self.frame_13)
         self.pushButton.setObjectName(u"pushButton")
@@ -3029,7 +3025,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(0)
-        self.mainPages.setCurrentIndex(0)
+        self.mainPages.setCurrentIndex(4)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -3148,14 +3144,14 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Tension: ", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Plancha 1", None))
         self.pushButton_10.setText(QCoreApplication.translate("MainWindow", u"10", None))
-        self.pushButton_9.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.p1h1_ipg1_Btn.setText(QCoreApplication.translate("MainWindow", u"1", None))
         self.pushButton_8.setText(QCoreApplication.translate("MainWindow", u"6", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"8", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"9", None))
         self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"3", None))
         self.pushButton_7.setText(QCoreApplication.translate("MainWindow", u"5", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"4", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.p1h1_ipg2_Btn.setText(QCoreApplication.translate("MainWindow", u"2", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"7", None))
         self.initMad_plancha1_horno1Btn.setText(QCoreApplication.translate("MainWindow", u"INICIAR MADURACION", None))
         self.label_20.setText(QCoreApplication.translate("MainWindow", u"HORNO 1", None))
