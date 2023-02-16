@@ -14,7 +14,7 @@ from SerialScripts.windows_com_find.port_find import get_port_name, print_availa
     #                     *args, 
     #                     **kwargs)
 
-serial_interface_name = 'USB-SERIAL CH340'
+RS5485_device_descriptor = 'USB-SERIAL CH340'
 
 
 
@@ -23,8 +23,10 @@ class Serial():
     def __init__(self, *args):
         self._tx_buffer = bytearray()
         self._rx_buffer = bytearray()
-        self._ser = rs485.RS485_serial(19200, serial.EIGHTBITS, serial.PARITY_NONE, serial.STOPBITS_ONE)
-        self._ser.set_port(get_port_name(serial_interface_name))
+
+    def init(self, port_name, baudrate = 19200):
+        self._ser = rs485.RS485_serial(baudrate, serial.EIGHTBITS, serial.PARITY_NONE, serial.STOPBITS_ONE)
+        self._ser.set_port(port_name)
         self._ser.open()
         
     def command_get_status(self,Board_num : int):
@@ -46,8 +48,8 @@ class Serial():
     def command_stop_burn_in(self):
         self._tx_buffer.clear()
         self._tx_buffer.append(0xAA)
-        self._tx_buffer.append(0x03)
         self._ser.write(self._tx_buffer)
+        self._tx_buffer.append(0x03)
         self._ser.flushInput()
         self._ser.flushOutput()
 
@@ -58,6 +60,7 @@ class Serial():
 if __name__ == "__main__":
 
     ser = Serial()
+    ser.init(get_port_name(device_descriptor), baudrate = 19200)
     while True:
         # send_read_cmd()
         # _ser.write(tx_buffer)
